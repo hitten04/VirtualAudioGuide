@@ -1,0 +1,202 @@
+.profile-container {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.profile-title {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.profile-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6B6B 0%, #FF8E53 100%);
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+/* Profile Card Styles */
+.profile-card, .booking-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover, .booking-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.profile-card .card-header, .booking-card .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 15px 20px;
+}
+
+.profile-card .card-body, .booking-card .card-body {
+  padding: 25px;
+}
+
+/* User Info Display */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.info-icon {
+  background-color: rgba(255, 107, 107, 0.1);
+  color: #FF6B6B;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.info-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Edit Form Styles */
+.form-control {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #FF6B6B;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* Button Styles */
+.edit-btn {
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Booking Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  font-weight: 600;
+  color: #444;
+  border-top: none;
+  padding: 12px 15px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+}
+
+.table td {
+  padding: 15px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-confirmed {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status-pending {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status-cancelled {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.status-completed {
+  background-color: rgba(23, 162, 184, 0.1);
+  color: #17a2b8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .profile-container {
+    margin-top: 20px;
+  }
+  
+  .profile-card, .booking-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 1.5rem;
+  }
+  
+  .info-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .info-value {
+    font-size: 15px;
+  }
+  
+  .table td, .table th {
+    padding: 10px;
+    font-size: 13px;
+  }
+} 

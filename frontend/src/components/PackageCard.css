@@ -1,0 +1,224 @@
+.package-card {
+  border: none;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Best Value Tag */
+.best-value-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #3D8D7A, #B3D8A8);
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: auto;
+  min-height: 28px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4757;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+}
+
+/* Card Content */
+.card-content {
+  padding: 40px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.package-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  overflow: visible;
+  height: auto;
+  min-height: auto;
+  line-height: 1.4;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(61, 141, 122, 0.3);
+  padding-top: 5px;
+}
+
+.package-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.9rem;
+  background-color: rgba(179, 216, 168, 0.15);
+  padding: 4px 10px;
+  border-radius: 15px;
+  width: auto;
+}
+
+.package-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #3D8D7A;
+}
+
+.original-price {
+  font-size: 1rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.discounted-price {
+  color: #ff4757;
+  display: flex;
+  align-items: center;
+}
+
+.package-description {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  white-space: normal;
+  height: auto;
+  overflow: visible;
+}
+
+/* Places Included */
+.places-included {
+  margin-top: 15px;
+}
+
+.places-included-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.places-included-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.place-tag {
+  background-color: #FFE082;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.place-tag:hover {
+  background-color: #59dc50;
+  transform: translateY(-1px);
+}
+
+/* Card Footer */
+.package-footer {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px 16px;
+  background-color: transparent;
+  border-top: none;
+}
+
+.view-package-btn, .book-now-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.view-package-btn {
+  border-color: #3D8D7A;
+  color: #3D8D7A;
+}
+
+.view-package-btn:hover {
+  background-color: #3D8D7A;
+  color: white;
+}
+
+.book-now-btn {
+  border-color: #B3D8A8;
+  color: #3D8D7A;
+}
+
+.book-now-btn:hover {
+  background-color: #B3D8A8;
+  color: white;
+}
+
+/* Responsive adjustments - keep simpler */
+@media (max-width: 768px) {
+  .card-content {
+    padding: 16px 12px 10px;
+  }
+  
+  .package-title {
+    font-size: 1.2rem;
+  }
+  
+  .package-description {
+    font-size: 0.85rem;
+  }
+  
+  .package-footer {
+    padding: 10px 12px 14px;
+  }
+} 

@@ -1,0 +1,109 @@
+.places-page {
+  margin-bottom: 60px;
+}
+
+.places-header {
+  background: linear-gradient(135deg, #ff6b6b, #48dbfb);
+  color: white;
+  padding: 60px 0 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.places-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.15), transparent 40%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15), transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.places-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity="1"/></svg>');
+  background-size: cover;
+  background-position: center bottom;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.places-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.places-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.places-search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.places-search-form .input-group {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.places-search-form .input-group-text {
+  background-color: white;
+  border: none;
+  padding-left: 20px;
+  color: var(--primary-color);
+}
+
+.places-search-form .form-control {
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.places-search-form .form-control:focus {
+  box-shadow: none;
+}
+
+.places-container {
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .places-title {
+    font-size: 2rem;
+  }
+  
+  .places-subtitle {
+    font-size: 1rem;
+  }
+  
+  .places-header {
+    padding: 40px 0 30px;
+  }
+} 

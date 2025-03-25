@@ -1,0 +1,235 @@
+.place-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(79, 209, 197, 0.15), rgba(99, 179, 237, 0.15));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 18px;
+}
+
+.place-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.place-card:hover::before {
+  opacity: 1;
+}
+
+.place-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.place-image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.place-card:hover .place-image-container::after {
+  opacity: 0.4;
+}
+
+.place-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.place-card:hover .place-image {
+  transform: scale(1.05);
+}
+
+.place-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.place-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4FD1C5, #63B3ED);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.place-card:hover .place-title::after {
+  width: 80px;
+}
+
+.place-location {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.place-location svg {
+  color: #4FD1C5;
+}
+
+.place-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.place-footer {
+  padding: 10px 16px 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.place-footer a {
+  text-decoration: none;
+  flex: 1;
+}
+
+.view-details-btn, 
+.audio-btn {
+  width: 100%;
+  font-size: 0.85rem;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.view-details-btn {
+  background-color: rgba(99, 179, 237, 0.1);
+  border: 1px solid rgba(99, 179, 237, 0.4);
+  color: #3182CE;
+}
+
+.audio-btn {
+  background-color: rgba(79, 209, 197, 0.1);
+  border: 1px solid rgba(79, 209, 197, 0.4);
+  color: #319795;
+}
+
+.view-details-btn:hover, 
+.audio-btn:hover {
+  transform: translateY(-3px);
+}
+
+.place-card .card-body {
+  padding: 16px;
+}
+
+/* Ribbon for featured places */
+.featured-ribbon {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: linear-gradient(90deg, #4FD1C5, #63B3ED);
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+}
+
+.place-duration-badge {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.place-card:hover .place-duration-badge {
+  background: rgba(79, 209, 197, 0.9);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .place-image-container {
+    height: 200px;
+  }
+  
+  .place-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .place-footer {
+    flex-direction: row;
+  }
+  
+  .view-details-btn, 
+  .audio-btn {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+  
+  .place-image-container {
+    height: 180px;
+  }
+} 
